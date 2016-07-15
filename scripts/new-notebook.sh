@@ -45,7 +45,7 @@ pip install -r ${REQS}
 START_SCRIPT="${NOTEBOOK_PATH}/start.sh"
 GITIGNORE_SCRIPT="${NOTEBOOK_PATH}/.gitignore"
 
-echo "./venv" >> $GITIGNORE_SCRIPT
+echo "venv" >> $GITIGNORE_SCRIPT
 echo "#!/bin/bash" >> $START_SCRIPT
 echo ". $VENV_PATH/bin/activate" >> $START_SCRIPT
 echo "jupyter notebook --notebook-dir=${NOTEBOOK_PATH}" >> $START_SCRIPT
@@ -53,7 +53,7 @@ chmod +x $START_SCRIPT
 
 git add $START_SCRIPT
 git add $GITIGNORE_SCRIPT
-git commit -m "add new python notebook ${NOTEBOOK_NAME}"
+#git commit -m "add new python notebook ${NOTEBOOK_NAME}"
 
 echo "new virtualenv is setup in ${NOTEBOOK_PATH}"
 echo "start it with"
