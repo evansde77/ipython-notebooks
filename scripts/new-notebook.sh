@@ -53,8 +53,10 @@ chmod +x $START_SCRIPT
 
 git add $START_SCRIPT
 git add $GITIGNORE_SCRIPT
-#git commit -m "add new python notebook ${NOTEBOOK_NAME}"
+git commit -m "add new python notebook ${NOTEBOOK_NAME}"
 
+echo ""
+echo ""
 echo "new virtualenv is setup in ${NOTEBOOK_PATH}"
 echo "start it with"
 echo "${NOTEBOOK_NAME}/start.sh"
