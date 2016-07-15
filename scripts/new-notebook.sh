@@ -33,15 +33,8 @@ if [[ "x$PYTHON_VERSION" = "x" ]]; then
     PYTHON_VERSION="python2.7"
 fi
 
-
-echo $REQS
-
 NOTEBOOK_PATH="${REPO_DIR}/${NOTEBOOK_NAME}"
 VENV_PATH="${NOTEBOOK_PATH}/venv"
-
-echo $NOTEBOOK_PATH
-echo $VENV_PATH
-echo $PYTHON_VERSION
 
 mkdir $NOTEBOOK_PATH
 virtualenv -p $PYTHON_VERSION $VENV_PATH
@@ -65,8 +58,4 @@ git commit -m "add new python notebook ${NOTEBOOK_NAME}"
 echo "new virtualenv is setup in ${NOTEBOOK_PATH}"
 echo "start it with"
 echo "${NOTEBOOK_NAME}/start.sh"
-
-
-
-
 
